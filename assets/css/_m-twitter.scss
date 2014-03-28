@@ -1,0 +1,18 @@
+.twitter {
+  display: none;
+
+  @include media-query($desk) {
+    display: inherit;
+    border-top: 1px solid $color--gray-lighter;
+    margin: $gutter--narrow;
+    padding: $gutter--normal 0;
+  }
+
+}
+.twitter .module-header {
+  @extend %hide;
+}
+
+iframe#twitter-widget-0  {
+  height: 440px !important;
+}

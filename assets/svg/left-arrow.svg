@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>left-arrow</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="left-arrow" sketch:type="MSArtboardGroup" fill="#000000">
+            <path d="M8,0 C3.582,0 0,3.582 0,8 C0,12.418 3.582,16 8,16 C12.418,16 16,12.418 16,8 C16,3.582 12.418,0 8,0 L8,0 Z M9.83,10.419 C10.019,10.616 10.019,10.937 9.83,11.134 L9.146,11.851 C8.958,12.05 8.652,12.05 8.462,11.851 L5.141,8.371 C4.953,8.174 4.953,7.853 5.141,7.654 L8.491,4.147 C8.68,3.95 8.987,3.95 9.175,4.147 L9.859,4.864 C10.048,5.061 10.048,5.382 9.859,5.58 L7.535,8.014 L9.83,10.419 L9.83,10.419 Z" id="Left_Circle_2" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

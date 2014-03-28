@@ -1,0 +1,164 @@
+/* Modular Scale
+----------------------
+16px @ 1:1.333
+----------------------*/
+p,
+blockquote,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+/*   max-width: 520px; */
+}
+
+blockquote {
+    position: relative;
+    margin-left: 0;
+    padding-left: $gutter--normal;
+    font-style: italic;
+    color: $color--blue;
+
+    &:before,
+    &:after {
+      position: absolute;
+      font-size: $typecsset-h1-size;
+      color: $color--blue;
+    }
+
+    &:before {
+      content: '“';
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      content: '”';
+      right: 0;
+      bottom: -$gutter--narrow;
+    }
+}
+
+p {
+  margin-top: $gutter--skinny;
+  margin-bottom: $gutter--narrow;
+}
+
+
+
+table {
+  clear: both;
+  width: 100%;
+
+}
+td,
+th {
+  padding: $gutter--skinny;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+}
+
+a {
+  color: $color--blue;
+
+  &:hover,
+  &:focus {
+    color: $color--green;
+  }
+
+  &:active {
+    color: $color--red;
+  }
+}
+
+
+body {
+  color: $color--gray-darker;
+  font-family: "Helvetica Neue","Helvetica Neue LT Std","Helvetica LT Std",Helvetica,arial,sans-serif;
+  font-size: $size--base;
+  line-height: 1.28571em;
+  line-height: $size--base + 6;
+
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+}
+
+
+h1,
+h2.article__title {
+  font-size: 28.43px;
+  line-height: 32px;
+  color: $color--gray-darker;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 21.328px;
+  line-height: 30px;
+  color: $color--green;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 21px;
+  color: $color--green;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+// Non-Global
+
+.nav a {
+  font-size: 12px;
+}
+
+.l-copyright {
+  font-size: 12px;
+  line-height: $size--touch-target;
+}
+
+
+
+.site-intro {
+  margin-top: $gutter--narrow;
+  font-size: $size--base;
+}
+
+.site-intro h1 {
+  color: $color--gray;
+  line-height: 25.2px;
+}
+
+
+
+
+
+ul,
+ol {
+    margin-left: 0;
+    padding-left: $gutter--normal;
+    margin-bottom: $gutter--normal;
+
+    @include media-query($desk) {
+      margin: 0 !important;
+    }
+}
+

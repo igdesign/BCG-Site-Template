@@ -1,0 +1,108 @@
+.icon-nav {
+  text-align: left;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: $gutter--narrow + 1;
+  margin-right: $gutter--narrow;
+
+  @include media-query($desk) {
+    margin: 2px 0 0 0;
+  }
+}
+
+.icon-nav .module-header {
+  @extend %hide;
+}
+
+.icon-nav__list {
+  @extend %list;
+/*   @extend %grid--full; */
+  width: 100%;
+}
+
+.icon-nav__item {
+/*   @extend %grid__item; */
+/*   @extend %one-fifth; */
+  display: table-cell;
+/*   margin: 0 $gutter--skinny; */
+/*   overflow: hidden; */
+  width: 1%;
+  white-space: nowrap;
+
+  @include media-query(420px, max, width) {
+    width: 25%;
+    display: inline-block;
+  }
+}
+
+.icon-nav__link {
+  display:  block;
+  height: $size--touch-target;
+  line-height: $size--touch-target;
+  background-color: $color--white;
+  color: $color--green;
+
+  text-align: center;
+
+  @include media-query($desk) {
+    line-height: 44px;
+  }
+
+  &:hover {
+    color: $color--blue;
+  }
+}
+
+
+
+.icon-nav__link i {
+  padding-left: 16px + $gutter--skinny;
+  margin-left: -16px + $gutter--skinny;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: $size--touch-target;
+
+  @include media-query(420px, max, width) {
+    text-indent: -999em;
+    width: 100%;
+    background-position: center center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.icon-nav__link--facebook i {
+  background-image: url(../svg/facebook--green.svg);
+  &:hover {
+    background-image: url(../svg/facebook--blue.svg);
+  }
+}
+
+.icon-nav__link--twitter i {
+  background-image: url(../svg/twitter--green.svg);
+  &:hover {
+    background-image: url(../svg/twitter--blue.svg);
+  }
+}
+
+.icon-nav__link--rss i {
+  background-image: url(../svg/rss--green.svg);
+  &:hover {
+    background-image: url(../svg/rss--blue.svg);
+  }
+}
+
+.icon-nav__link--newsletter i {
+  background-image: url(../svg/mail--green.svg);
+  &:hover {
+    background-image: url(../svg/mail--blue.svg);
+  }
+}
+
+.icon-nav__link--apple i {
+  background-image: url(../svg/apple--green.svg);
+  &:hover {
+    background-image: url(../svg/apple--blue.svg);
+  }
+}
