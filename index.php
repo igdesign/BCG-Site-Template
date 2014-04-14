@@ -1,13 +1,4 @@
-<?php
-/**
- * @package     BCG.Site
- * @subpackage  Templates.generationOne
- *
- * @copyright   Copyright (C) 2014 iG Design & Publishing, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
-defined('_JEXEC') or die;
+<?php defined('_JEXEC') or die;
 
 // Getting params from template
 $params = JFactory::getApplication()->getTemplate(true)->params;
@@ -30,7 +21,20 @@ $template = 'templates/' . $this->template;
 $user = JFactory::getUser();
 
 
+//get the array containing all the script declarations
+$document = JFactory::getDocument();
+$headData = $document->getHeadData();
+$scripts = $headData['scripts'];
 
+
+unset($this->_scripts['/media/system/js/mootools-core.js']);
+unset($this->_scripts['/media/system/js/core.js']);
+unset($this->_scripts['/media/jui/js/jquery.min.js']);
+unset($this->_scripts['/media/jui/js/jquery-noconflict.js']);
+unset($this->_scripts['/media/jui/js/jquery-migrate.min.js']);
+unset($this->_scripts['/media/jui/js/chosen.jquery.min.js']);
+unset($this->_script['text/javascript']);
+unset($this->_styleSheets['/media/jui/css/chosen.css']);
 
 
 ?><!DOCTYPE html>
@@ -94,7 +98,6 @@ $user = JFactory::getUser();
      * Scripts
      */
     $doc->addScript('templates/' .$this->template. '/assets/js/modernizr.min.js');
-/*     $doc->addScript('media/jui/js/chosen.jquery.min.js'); */
   ?>
 
 <!-- /// HEADER -->
@@ -118,18 +121,21 @@ $user = JFactory::getUser();
 
 
 
-  <!--
+<!--
     - Menu Collapse Handler
     -
     -->
-  <input type="checkbox" name="site-nav__handler" id="site-nav__handler" class="site-nav__handler" />
-  <label for="site-nav__handler" class="site-nav__label" aria-label="Toggle Navigation"><i class="icon">&#x2261;</i> Menu<span class="lines"></span></label>
+<input type="checkbox" name="site-nav__handler" id="site-nav__handler" class="site-nav__handler" />
+<label for="site-nav__handler" class="site-nav__label" aria-label="Toggle Navigation">
+  <i class="icon">&#x2261;</i> Menu
+  <span class="lines"></span>
+</label>
 <!--
   <label for="site-nav__handler" class="site-nav__label" aria-label="Toggle Navigation">
     <span class="lines">Menu</span>
   </label>
 -->
-  <!-- /menu-handler -->
+<!-- /menu-handler -->
 
 
 
@@ -138,10 +144,10 @@ $user = JFactory::getUser();
     - Search Collapse Handler
     -
     -->
-  <input type="checkbox" name="site-search__handler" id="site-search__handler" class="site-search__handler" />
-  <label for="site-search__handler" class="site-search__label" aria-label="Toggle Navigation">
-    <span class="icon">Search</span>
-  </label>
+<input type="checkbox" name="site-search__handler" id="site-search__handler" class="site-search__handler" />
+<label for="site-search__handler" class="site-search__label" aria-label="Toggle Navigation">
+  <span class="icon">Search</span>
+</label>
   <!-- /search-handler -->
 
 

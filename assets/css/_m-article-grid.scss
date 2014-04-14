@@ -9,8 +9,7 @@
 }
 
 .article-grid__container {
-/*   @extend %list; */
-  @extend %grid--full;
+  @extend %grid;
 }
 
 .article-grid__item {
