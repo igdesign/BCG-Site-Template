@@ -97,7 +97,7 @@ unset($this->_styleSheets['/media/jui/css/chosen.css']);
     /**
      * Scripts
      */
-    $doc->addScript('templates/' .$this->template. '/assets/js/modernizr.min.js');
+//     $doc->addScript('templates/' .$this->template. '/assets/js/modernizr.min.js');
   ?>
 
 <!-- /// HEADER -->
