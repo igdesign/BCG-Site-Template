@@ -107,7 +107,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 						<?php
 						echo JHtml::_(
 							'date', $article->displayDate, $this->escape(
-								$this->params->get('date_format', JText::_('DATE_FORMAT_LC3'))
+								$this->params->get('date_format', JText::_('DATE_FORMAT_LC4'))
 							)
 						); ?>
 					</td>

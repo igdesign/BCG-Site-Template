@@ -1,0 +1,42 @@
+//
+// menu-eight
+//
+.menu-eight {
+
+}
+
+.menu-eight__list {
+    flex-wrap: wrap;
+}
+
+.menu-eight__item {
+    min-width: 24%;
+    /* max-width: 25%; */
+    width: 24%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.menu-eight__text {
+    text-shadow: 0 0 2px $shadow--light;
+}
+
+.menu-eight__link {
+    color: $color--white;
+    @include vertical-gradient(lighten($color--secondary, 5%), $color--secondary);
+
+    &:hover {
+        background-image: none;
+        background-color: lighten($color--secondary, 10%);
+        color: $color--white;
+
+        .menu-eight__text {
+            text-shadow: 0 0 5px $shadow--dark;
+        }
+    }
+
+    &:active {
+        background-color: darken($color--secondary, 10%);
+        border-color: $color--secondary;
+    }
+}

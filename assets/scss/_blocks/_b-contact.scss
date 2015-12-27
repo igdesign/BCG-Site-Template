@@ -1,0 +1,22 @@
+.contact {
+  padding: 0;
+  line-height: $size--touch-target;
+  font-size: $size--small;
+
+  &__list {
+    @extend %list;
+  }
+
+  &__item {
+    display: inline-block;
+    text-align: center;
+  }
+
+  &__link {
+    color: $color--gray-light;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    text-decoration: none;
+  }
+}

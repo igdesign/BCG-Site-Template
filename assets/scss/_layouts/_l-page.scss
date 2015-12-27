@@ -1,0 +1,22 @@
+//
+// l-page
+//
+.l-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding-top: $size--touch-target + $gutter-vertical;
+
+    @include respond-to(desktop) {
+        position: inherit;
+        margin: 50px auto 0;
+        padding-top: 0;
+        width: 1038px;
+        border: 10px solid $color--white;
+        box-sizing: content-box;
+        background-color: $color--white;
+        border-radius: $border-radius * 2;
+    }
+}

@@ -1,0 +1,35 @@
+//
+// l-banner
+//
+.l-banner {
+    @extend %clearfix;
+
+    background-color: $color--white;
+    width: 100%;
+    margin-bottom: 10px;
+
+    .module {
+        margin-bottom: $gutter-vertical;
+    }
+
+    @include respond-to(desktop) {
+        .module,
+        .menu {
+            display: inline-block;
+            float: left;
+            margin-bottom: 0;
+        }
+
+        .module.advertisement {
+            margin-right: $gutter-horizontal;
+        }
+
+        .module.site-search {
+            margin-bottom: $gutter-vertical;
+        }
+
+        .icon-menu {
+            width: 300px;
+        }
+    }
+}

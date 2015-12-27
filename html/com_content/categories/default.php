@@ -14,7 +14,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
 JHtml::_('behavior.caption');
 ?>
-<div class="categories-list<?php echo $this->pageclass_sfx;?>">
+<div class="categories-list  <?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
 <h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
@@ -37,4 +37,3 @@ JHtml::_('behavior.caption');
 echo $this->loadTemplate('items');
 ?>
 </div>
-

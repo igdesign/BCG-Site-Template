@@ -36,7 +36,7 @@ endif;
 		}
 	}
 </script>
-<div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
+<div class="edit item-page <?php echo $this->pageclass_sfx; ?>">
 <?php if ($params->get('show_page_heading')) : ?>
 <h1>
 	<?php echo $this->escape($params->get('page_heading')); ?>

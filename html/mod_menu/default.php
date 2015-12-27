@@ -9,10 +9,23 @@
 
 defined('_JEXEC') or die;
 
+$classSfx = explode(' ', $class_sfx);
+$classes = ['list' => [], 'item' => [], 'link' => [], 'text' => []];
+
+foreach($classSfx as $index => $class) {
+	foreach($classes as $type => $value) {
+		$classes[$type][] = $class.'__'.$type;
+	}
+}
+
+foreach($classes as $i => $class) {
+	$classes[$i] = implode(' ', $class);
+}
+
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<ul class="nav menu  <?php echo $class_sfx; ?>__list"<?php
+<ul class="nav <?= $classes['list'] ?>" <?php
 	$tag = '';
 	if ($params->get('tag_id') != null)
 	{
@@ -62,7 +75,7 @@ foreach ($list as $i => &$item) :
 
 	if (!empty($class))
 	{
-		$class = ' class="'.trim($class) .'  '.$class_sfx.'__item"';
+		$class = ' class="'.trim($class) .'  '.$classes['item'].'"';
 	}
 
 	echo '--><li'.$class.'>';
@@ -84,7 +97,7 @@ foreach ($list as $i => &$item) :
 	// The next item is deeper.
 	if ($item->deeper)
 	{
-		echo '<ul class="nav-child unstyled small  '.$class_sfx.'__list"><!--';
+		echo '<ul class="nav-child unstyled small  '.$classes['list'].'"><!--';
 	}
 	// The next item is shallower.
 	elseif ($item->shallower)

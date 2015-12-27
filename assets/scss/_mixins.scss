@@ -1,0 +1,35 @@
+//
+// Responsive Mixin
+//
+@mixin respond-to($media) {
+    /* @media #{mq($breakpoints, $media)} { @content } */;
+    @if map-has-key($breakpoints, $media) {
+        @if $ie == true { .lt-ie9 & { @content; } } // ie9 fix
+
+        @media #{mq($breakpoints, $media)} { @content; };
+    }
+}
+
+@mixin vertical-gradient($start: #fff, $stop: #000, $direction: to bottom) {
+    background-color: $start;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start), to($stop)); /* Chrome, Safari 4+ */
+    background-image: -webkit-linear-gradient(top, $start, $stop); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:    -moz-linear-gradient(top, $start, $stop); /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(top, $start, $stop); /* Opera 11.10-12.00 */
+    background-image:         linear-gradient($direction, $start, $stop); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+@mixin horizontal-gradient($start: #fff, $stop: #000, $direction: to right) {
+    background-color: $start;
+    background-image: -webkit-gradient(linear, left top, right top, from($start), to($stop)); /* Chrome, Safari 4+ */
+    background-image: -webkit-linear-gradient(left, $start, $stop); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:    -moz-linear-gradient(left, $start, $stop); /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(left, $start, $stop); /* Opera 11.10-12.00 */
+    background-image:         linear-gradient($direction, $start, $stop); /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+
+@mixin ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

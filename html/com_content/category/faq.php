@@ -21,7 +21,7 @@ $cparams = JComponentHelper::getParams('com_media');
 // If the page class is defined, add to class as suffix.
 // It will be a separate class if the user starts it with a space
 ?>
-<section class="faq<?php echo $this->pageclass_sfx;?>">
+<section class="faq <?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading') != 0 or $this->params->get('show_category_title')) : ?>
 <h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>

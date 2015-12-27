@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 $isSingleTag = (count($this->item) == 1);
 ?>
-<div class="tag-category<?php echo $this->pageclass_sfx; ?>">
+<div class="tag-category <?php echo $this->pageclass_sfx; ?>">
 <?php  if ($this->params->get('show_page_heading')) : ?>
 <h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>

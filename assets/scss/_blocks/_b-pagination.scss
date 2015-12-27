@@ -1,0 +1,53 @@
+
+.pagination {
+  text-align: center;
+  border-top: 1px solid $color--gray-lighter;
+  margin-top: $gutter--normal;
+  padding-top: $gutter--skinny;
+
+  p.counter{
+    // Page 1 of 28
+    color: $color--gray-light;
+    margin-bottom: 0;
+  }
+
+  .pagination-list {
+    @extend %list;
+/*     text-align: center; */
+
+    li {
+      display: inline-block;
+    }
+  }
+
+  .disabled {
+
+  }
+
+  a {
+    display: block;
+    padding: $gutter--skinny $gutter--narrow;
+  }
+
+  i {
+    display: block;
+    background-color: $color--gray-light;
+  }
+
+}
+
+
+.page-navigation {
+    @extend %list;
+    text-align: center;
+    margin: $gutter--narrow auto;
+
+    .page-navigation__item {
+        float: left;
+    }
+
+    .page-navigation__link {
+
+    }
+
+}

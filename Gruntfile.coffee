@@ -9,16 +9,15 @@ module.exports = (grunt) ->
 
     sass:
       options:
-        sourcemap: true
         precision: 7
         noCache: true
       build:
         files:
-          'assets/css/style.css': 'assets/css/style.scss'
+          'assets/css/style.css': 'assets/scss/style.scss'
 
     autoprefixer:
       options:
-        browsers: ['last 2 version', 'ie 9', '> 1%']
+        browsers: ['last 2 version', 'ie 10', '> 1%']
       build:
         files:
           'assets/css/style.css': 'assets/css/style.css'

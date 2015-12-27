@@ -25,17 +25,19 @@
 		<folder>less</folder>
 	</files>
 	<positions>
+		<position>banner</position>
+		<position>quick-nav</position>
 		<position>header</position>
+		<position>sidebar</position>
+		
 		<position>header-tools</position>
 		<position>debug</position>
 		<position>component-header</position>
 		<position>component-top</position>
 		<position>component-bottom</position>
 		<position>component-footer</position>
-		<position>sidebar</position>
 		<position>footer</position>
 		<position>copyright</position>
-		<position>banner</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_protostar.ini</language>

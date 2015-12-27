@@ -1,0 +1,84 @@
+//
+// advertisement
+//
+.advertisement {
+    margin-bottom: $gutter-vertical;
+
+    .module-header {  display: none; }
+
+    &.advertisement--responsive {
+        .advertisement {
+            margin: 0 auto;
+
+            @include respond-to(minimum) {
+                display: none;
+            }
+        }
+
+        .advertisement__link {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .advertisement--full-banner {
+            width: 100%;
+            height: 60px;
+            max-width: 468px;
+
+            @include respond-to(ad-leaderboard) {
+                display: none;
+            }
+        }
+
+        .advertisement--leaderboard {
+            width: 728px;
+            height: 90px;
+            display: none;
+
+            @include respond-to(ad-leaderboard) {
+                display: inherit;
+            }
+        }
+    }
+
+    &.advertisement--medium-rectangle {
+        width: 300px;
+        height: 250px;
+    }
+
+    &.advertisement--rising-star {
+        width: 300px;
+        height: 50px;
+    }
+
+    &.advertisement--vertical-banner {
+        width: 145px;
+        height: 290px;
+        display: inline-block;
+        margin-right: $gutter-horizontal;
+
+        &.last {
+            margin-right: 0;
+        }
+    }
+
+    .advertisement {
+        position: relative;
+    }
+
+        .advertisement__link {
+
+        }
+
+
+    .advertisement__image {
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+}

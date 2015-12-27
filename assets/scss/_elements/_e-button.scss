@@ -1,0 +1,62 @@
+.button {
+  min-width: $size--touch-target;
+  background-color: $color--primary;
+  border: 1px solid darken($color--primary, 10%);
+  box-shadow: $box-shadow;
+  display: inline-block;
+  color: $color--white;
+  text-decoration: none;
+  border-radius: 2px;
+  padding: 0 $gutter--narrow;
+  line-height: $size--touch-target;
+  height: $size--touch-target;
+
+  @include respond-to(desktop) {
+    height: $size--touch-target * .75;
+    line-height: $size--touch-target * .75;
+  }
+
+
+  @include vertical-gradient(lighten($color--primary, 5%), $color--primary);
+
+  &:hover,
+  &:focus {
+    color: $color--white;
+
+    background-image: none;
+    background-color: $color--primary;
+
+  }
+
+  &:active {
+    background-image: none;
+    background-color: $color--primary;
+    box-shadow: none;
+    border-bottom-color: $color--primary;
+    box-shadow: inset $box-shadow;
+  }
+}
+
+.button--nav {
+  @extend .button;
+
+  @include vertical-gradient(lighten($color--blue, 5%), $color--blue);
+  border: 1px solid $color--primary;
+  border-bottom-color: darken($color--blue, 20%);
+  box-shadow: $box-shadow,
+              $box-shadow--highlight;
+
+  &:hover,
+  &:focus {
+    background-image: none;
+    background-color: lighten($color--primary, 5%);
+  }
+
+  &:active {
+    background-image: none;
+    background-color: $color--primary;
+    box-shadow: none;
+    border-bottom-color: $color--primary;
+    box-shadow: inset $box-shadow;
+  }
+}

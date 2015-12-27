@@ -1,0 +1,46 @@
+//
+// Menu defaults
+//
+.menu {
+
+}
+
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+}
+
+.menu__item {
+    flex-grow: 1;
+    display: flex;
+}
+
+.menu__link {
+    background-color: white;
+    min-height: 44px;
+    max-height: 44px;
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: 400;
+
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu__text {
+    font-style: normal;
+}
+
+@import "b-menu__grid";
+@import "b-menu__main-menu";
+@import "b-menu__footer-menu";
+@import "b-menu__icon-menu";
+@import "b-menu__menu-eight";
+@import "b-menu__menu-four";

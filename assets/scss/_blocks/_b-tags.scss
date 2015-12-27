@@ -1,0 +1,23 @@
+.tags {
+    @extend %list;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        font-size: $size--small;
+        display: block;
+        background-color: $color--gray-light;
+        text-decoration: none;
+        padding: 2px 5px;
+        border-radius: 3px;
+        color: $white;
+
+    }
+
+}
+
+.inline {
+    margin: 1px 1px;
+}

@@ -1,0 +1,15 @@
+//
+// menu--grid
+//
+.menu--grid {
+    /* flex-wrap: wrap; */
+}
+
+.menu--grid .menu__list {
+    margin-top: -1px;
+    margin-left: -1px;
+}
+
+.menu--grid .menu__item {
+    margin: 1px 0 0 1px;
+}

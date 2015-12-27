@@ -9,8 +9,22 @@
 
 defined('_JEXEC') or die;
 
+$classSfx = explode(' ', $class_sfx);
+$classes = ['list' => [], 'item' => [], 'link' => [], 'text' => []];
+
+foreach($classSfx as $index => $class) {
+	foreach($classes as $type => $value) {
+		$classes[$type][] = $class.'__'.$type;
+	}
+}
+
+foreach($classes as $i => $class) {
+	$classes[$i] = implode(' ', $class);
+}
+
+
 // Note. It is important to remove spaces between elements.
-$class = $item->anchor_css ? 'class="'.$class_sfx.'__link '.$item->anchor_css.'" ' : 'class="'.$class_sfx.'__link"';
+$class = $item->anchor_css ? 'class="'.$classes['link'].' '.$item->anchor_css.'" ' : 'class="'.$classes['link'].'"';
 $title = $item->anchor_title ? 'title="'.$item->anchor_title.'" ' : '';
 if ($item->menu_image)
 	{
@@ -24,11 +38,11 @@ else { $linktype = $item->title;
 switch ($item->browserNav) :
 	default:
 	case 0:
-?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><i><?php echo $linktype; ?></i></a><?php
+?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><i class="<?= $classes['text'] ?>"><?php echo $linktype; ?></i></a><?php
 		break;
 	case 1:
 		// _blank
-?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" target="_blank" <?php echo $title; ?>><i><?php echo $linktype; ?></i></a><?php
+?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" target="_blank" <?php echo $title; ?>><i class="<?= $classes['text'] ?>"><?php echo $linktype; ?></i></a><?php
 		break;
 	case 2:
 	// window.open

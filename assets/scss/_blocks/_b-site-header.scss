@@ -1,0 +1,63 @@
+//
+// site-header
+//
+.module.site-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: $color--primary;
+    height: $size--touch-target;
+
+    @include respond-to(desktop) {
+        position: inherit;
+        height: auto;
+        background-color: transparent;
+    }
+
+    .module-header {
+        display: none;
+    }
+
+    .custom.site-header {
+        color: $color--white;
+        text-align: center;
+
+        @include respond-to(desktop) {
+            width: 728px;
+            height: 180px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            line-height: $size--touch-target;
+
+            @include respond-to(desktop) {
+                visibility: hidden;
+                height: 0;
+                overflow: hidden;
+            }
+        }
+
+        h2 {
+            visibility: hidden;
+            display: none;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: none;
+
+            @include respond-to(desktop) {
+                display: block;
+            }
+        }
+
+    }
+
+}

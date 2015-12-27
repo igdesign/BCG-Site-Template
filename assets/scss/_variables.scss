@@ -1,0 +1,137 @@
+//
+// Variables
+//
+$ie: false;
+$browser-context: 16 ; // Default
+$breakpoints: (
+    mobile: (
+        max: em(480)
+    ),
+    tablet: (
+        min: em(480.1),
+        max: em(1023.999999)
+    ),
+    handheld: (
+        max: em(1023.999999)
+    ),
+    desktop: (
+        min: em(1024)
+    ),
+    hd: (
+        min: em(1440)
+    ),
+    not-mobile: (
+        min: em(480)
+    ),
+    ad-leaderboard: (
+        min: em(728),
+    ),
+    minimum: (
+        max: em(320),
+    )
+);
+
+// Mains
+
+$color--primary:   #c22;
+$color--secondary: #999;
+
+// Cool
+
+$color--aqua:  #7FDBFF;
+$color--blue:  #0054a4;
+$color--blue--light: lighten($color--blue, 10%);
+$color--blue--dark: darken($color--blue, 5%);
+$color--navy:  #001F3F;
+$color--teal:  #39CCCC;
+$color--green: #5d9632;
+$color--green--light: #e0edd5;
+$color--olive: #3D9970;
+$color--lime:  #01FF70;
+
+
+// Warm
+
+$color--yellow:  #FFDC00;
+$color--orange:  #FF851B;
+$color--red:     #FF4136;
+$color--fuchsia: #F012BE;
+$color--purple:  #B10DC9;
+$color--maroon:  #85144B;
+
+// Gray Scale
+
+$color--black:        #221;
+$color--gray-darker:  #222;
+$color--gray-dark:    #333;
+$color--gray:          #555;
+$color--gray-light:   #999;
+$color--gray-lighter: #eee;
+$color--white:        #fff;
+
+// Shadows
+$shadow--light: rgba(0,0,0,.1);
+$shadow--dark:  rgba(0,0,0,.3);
+$shadow--bright: rgba(255,255,255,.1);
+
+
+//
+// Sizes
+//
+$size--small: 12px;
+$size--base:  16px;
+$size--touch-target: 32px;
+$size--menu-width: 288px;
+
+//
+// Gutters
+//
+$gutter: 10px;
+$gutter--small:  $gutter / 2;
+$gutter--normal: $gutter;
+$gutter--large:  $gutter * 2;
+
+
+$gutter-horizontal: $gutter--normal;
+$gutter-vertical:   $gutter--normal;
+
+//
+// Corners
+//
+$border-radius: 3px;
+
+// Typography
+$typecsset-base-font-size:    $size--base;
+$typecsset-base-line-height:  18px;
+
+// Heading sizes
+$typecsset-h1-size: 36px !default;
+$typecsset-h2-size: 24px !default;
+$typecsset-h3-size: 16px !default;
+$typecsset-h4-size: 24px !default;
+$typecsset-h5-size: 20px !default;
+$typecsset-h6-size: 18px !default;
+
+
+$animation--transition-speed: 0.3s;
+$z-index--menu: 999;
+$z-index--search: 998;
+$z-index--header: 997;
+$z-index--absolute: 1000;
+
+// Shadows
+$box-shadow--color: $shadow--light;
+$box-shadow--left: 2px;
+$box-shadow--top: 2px;
+$box-shadow--radius: 0;
+$box-shadow: $box-shadow--left $box-shadow--top $box-shadow--radius $shadow--light;
+$box-shadow--highlight: inset 0 1px 0 $shadow--bright;
+
+
+// quick var
+$black: $color--black;
+$white: $color--white;
+$primary: $color--primary;
+$secondary: $color--secondary;
+$gutter--narrow: $gutter--small;
+$gutter--skinny: $gutter--small / 2;

@@ -1,0 +1,41 @@
+%clearfix {
+    &:after {
+      content:"";
+      display:table;
+      clear:both;
+    }
+}
+
+%vertical-center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%hide {
+  @extend %ir;
+  @extend %zero;
+
+  height: 0;
+}
+
+%zero {
+  margin: 0;
+  padding: 0;
+}
+
+%list {
+  @extend %zero;
+  list-style: none;
+}
+
+%outline {
+  box-shadow: inset -1px -1px 0 $black,
+              inset  1px  1px 0 $black;
+}

@@ -20,7 +20,7 @@ if (!$templateparams->get('html5', 0))
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.caption');
-?><div class="archive<?php echo $this->pageclass_sfx;?>">
+?><div class="archive <?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
 <h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>

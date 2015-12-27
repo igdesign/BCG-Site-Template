@@ -1,0 +1,11 @@
+//
+// l-sidebar
+//
+.l-sidebar {
+    display: none;
+
+    @include respond-to(desktop) {
+        display: inline-block;
+        width: 300px;
+    }
+}
